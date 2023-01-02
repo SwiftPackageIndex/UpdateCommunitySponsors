@@ -37,8 +37,9 @@ struct Update: AsyncParsableCommand {
 
         var output = SourceTemplate.header
         for sponsor in sponsors {
-            if let url = sponsor.avatarUrl {
+            if let login = sponsor.login, let url = sponsor.avatarUrl {
                 output += "        CommunitySponsor(\n"
+                output += "            login: \"\(login)\",\n"
                 output += "            name: \(sponsor.nameOrNil),\n"
                 output += "            avatarUrl: \"\(url)\"\n"
                 output += "        ),\n"
@@ -77,10 +78,12 @@ struct Update: AsyncParsableCommand {
               nodes {
                 sponsorEntity {
                   ... on Organization {
+                    login
                     name
                     avatarUrl
                   }
                   ... on User {
+                    login
                     name
                     avatarUrl
                   }

@@ -40,6 +40,7 @@ enum SourceTemplate {
     }
 
     struct CommunitySponsor {
+        let login: String
         let name: String?
         let avatarUrl: String
     }\n

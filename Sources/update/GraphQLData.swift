@@ -40,7 +40,9 @@ struct SponsorQueryResults: Codable {
     }
 
     struct SponsorEntity: Codable {
+        let login: String?
         let name: String?
+        let username: String?
         let avatarUrl: String?
 
         var nameOrNil: String {
