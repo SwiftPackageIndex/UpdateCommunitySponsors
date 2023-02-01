@@ -31,18 +31,12 @@ enum SourceTemplate {
     // This file is auto-generated. Do not modify. For more information,
     // see: https://github.com/SwiftPackageIndex/UpdateCommunitySponsors
 
-    enum CommunitySponsors {
-        static var sponsors = [\n
+    extension Array<Supporters.CommunitySponsor> {
+        static var gitHubSponsors: Self = [\n
     """
 
     static var footer: String = """
         ]
-    }
-
-    struct CommunitySponsor {
-        let login: String
-        let name: String?
-        let avatarUrl: String
     }\n
     """
 }

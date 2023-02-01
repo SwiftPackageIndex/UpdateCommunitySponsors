@@ -38,7 +38,7 @@ struct Update: AsyncParsableCommand {
         var output = SourceTemplate.header
         for sponsor in sponsors {
             if let login = sponsor.login, let url = sponsor.avatarUrl {
-                output += "        CommunitySponsor(\n"
+                output += "        .init(\n"
                 output += "            login: \"\(login)\",\n"
                 output += "            name: \(sponsor.nameOrNil),\n"
                 output += "            avatarUrl: \"\(url)\"\n"
@@ -96,7 +96,7 @@ struct Update: AsyncParsableCommand {
     }
 
     func pathToOutputFile() -> String {
-        outputDirectory.expandingTilde(path: "Sources/App/Core/CommunitySponsors.swift")
+        outputDirectory.expandingTilde(path: "Sources/App/Core/Supporters+GitHub.swift")
     }
 }
 
