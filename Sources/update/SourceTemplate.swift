@@ -31,7 +31,7 @@ enum SourceTemplate {
     // This file is auto-generated. Do not modify. For more information,
     // see: https://github.com/SwiftPackageIndex/UpdateCommunitySponsors
 
-    extension Array<Supporters.CommunitySponsor> {
+    extension Array<Supporters.Community> {
         static var gitHubSponsors: Self = [\n
     """
 
