@@ -32,7 +32,7 @@ enum SourceTemplate {
     // see: https://github.com/SwiftPackageIndex/UpdateCommunitySponsors
 
     extension Array<Supporters.Community> {
-        static var gitHubSponsors: Self = [\n
+        static let gitHubSponsors: Self = [\n
     """
 
     static var footer: String = """
